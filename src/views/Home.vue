@@ -34,8 +34,38 @@
                 <hr>
                 <b-alert show variant="danger" dismissible>Danger alert with dismissible</b-alert>
             </div>
+            <hr>
+            <div class="mb-4">
+              <b-avatar></b-avatar>
+              <b-avatar variant="primary" text="BV"></b-avatar>
+              <b-avatar variant="info" src="https://placekitten.com/300/300" class="m-2" size=""></b-avatar>
+              <b-avatar variant="info" src="https://placekitten.com/310/310" class="m-2" size="24px"></b-avatar>
+              <b-avatar variant="info" src="https://placekitten.com/320/320" class="m-2" :size="42"></b-avatar>
+              <b-avatar variant="info" src="https://placekitten.com/330/330" class="m-2" size="6rem"></b-avatar>
+              <b-avatar variant="success" icon="people-fill"></b-avatar>
+            </div>
+            <div class="mb-2">
+              <b-avatar icon="people-fill"></b-avatar>
+              <b-avatar icon="star-fill"></b-avatar>
+              <b-avatar icon="music-note"></b-avatar>
+              <b-avatar icon="star-fill" size="4em"></b-avatar>
+            </div>
+            <div>
+              <b-avatar variant="secondary"></b-avatar>
+              <b-avatar variant="primary"></b-avatar>
+              <b-avatar variant="dark"></b-avatar>
+              <b-avatar variant="light"></b-avatar>
+              <b-avatar variant="success"></b-avatar>
+              <b-avatar variant="danger"></b-avatar>
+              <b-avatar variant="warning"></b-avatar>
+              <b-avatar variant="info"></b-avatar>
+            </div>
+            <b-button pill variant="outline-primary" class="m-2">Outline - Primary</b-button>
+            <b-button squared variant="outline-success" class="m-2">Outline - Success</b-button>
+            <b-button variant="outline-danger" class="m-2">Outline - Danger</b-button>
+            <b-button variant="outline-warning" class="m-2">Outline - Warning</b-button>
         </b-container>
-        <b-container>
+        <!-- <b-container>
             <b-button @click="change_aspect('2:1')" class="m-3">2:1</b-button>
             <b-button @click="change_aspect('4:3')" class="m-3">4:3</b-button>
             <b-button @click="change_aspect('16:9')" class="m-3">16:9</b-button>
@@ -43,26 +73,27 @@
 
             <hr />
 
-            <b-aspect :aspect="aspect" style="border: 1px solid black;">
-              My aspect: {{aspect}}
+            <b-aspect :aspect="aspectkk" style="border: 1px solid black;">
+              My aspect: {{aspectkk}}
             </b-aspect>
 
             <hr />
 
             <b-row>
                   <b-col>
-                    <b-aspect :aspect="aspect" style="border: 1px solid black;">
-                      My aspect: {{aspect}}
+                    <b-aspect :aspect="aspectkk" style="border: 1px solid black;">
+                      My aspect: {{aspectkk}}
                     </b-aspect>
                   </b-col>
                   <b-col>
-                    <b-aspect :aspect="aspect" style="border: 1px solid black;">
-                      My aspect: {{aspect}}
+                    <b-aspect :aspect="aspectkk" style="border: 1px solid black;">
+                      My aspect: {{aspectkk}}
                     </b-aspect>
                   </b-col>
             </b-row>
-        </b-container>
+        </b-container> -->
       </b-container>
+
 </template>
 
 <script>
@@ -74,7 +105,7 @@ export default {
   data(){
      return {
         success_show : false,
-        aspect: '2:1',
+        aspectkk: '2:1',
      } 
   },
   methods:{
@@ -82,7 +113,7 @@ export default {
         this.success_show = !this.success_show;
      },
       change_aspect (aspect_value) {
-      this.aspect = aspect_value;
+      this.aspectkk = aspect_value;
     }
   }
   // components: {
